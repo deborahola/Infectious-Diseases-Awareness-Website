@@ -1,0 +1,156 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Our CSS -->
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <!-- Title of Page -->
+    <title>Take Action</title>
+  </head>
+
+  <!-- Main Body of Entire Page -->
+  <body>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <ul class="navbar d-flex justify-content-end">
+        <li class="nav-item"><a href="index">Home</a></li>
+        <li class="nav-item"><a href="immunization">Immunization</a></li>
+        <li class="nav-item"><a href="action">Take Action</a></li>
+        <li class="nav-item"><a href="quiz">Quiz</a></li>
+        <li class="nav-item"><a href="about">About</a></li>
+      </ul>
+    </nav>
+
+    <!--Top section of Take Action page with title and description (subtitle)-->
+    <header class="take-action-heading">
+      <br> <!-- break (delete if needed) -->
+      <h1><b>TAKE ACTION</b></h1>
+      <p class="subtitle">There are many ways you can take action against infectious diseases. Below are some suggestions to help yourself and others.</p>
+    </header>
+
+    <!-- Content: Take Action Carousel-->
+    <main>
+      
+      <!-- Carousel with take action suggestions; 3 items -->
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="{{url_for('static', filename='images/NFIDWebinars.webp')}}" class="d-block w-10" alt="Image of NFID Webinar">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>NFID Webinars</h2>
+              <p class="attribution">NFID hosts monthly webinars to increase awareness of the importance of infectious disease prevention and treatment. <a href="https://www.nfid.org/about-nfid/continuing-medical-education/webinars/"><mark>Learn more here</mark></a>.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://www.gavi.org/sites/default/files/vaccineswork/2021/Thumb/shutterstock_392198128_h2.jpg" class="d-block w-10" alt="Image of Antibiotic Resiatance">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Antibiotic Resistance</h2>
+              <p class="attribution">Read more about <a href="https://www.nfid.org/antibiotic-resistance/"><mark>Antibiotic Resistance</mark></a>.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.who.int/images/default-source/pharmacovigilance/vsn/twitter-vsn-nfid.png?sfvrsn=9ff13519_3" class="d-block w-10" alt="Image of a Mask">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Donate!</h2>
+              <p class="attribution">Join the fight against infectious diseases! <a href="https://nfid.app.neoncrm.com/forms/donate"><mark>Visit here</mark></a>.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+      <h9>Learn these healthy habits to protect yourself from diseases.</h9>
+
+      <!-- Checklist = 8 items -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          1. Handle & Prepare Food Safely
+          <p class="attribution1">Find more information about <a href="https://www.foodsafety.gov/"><mark>Food Safety</mark></a>.</p>
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+        <label class="form-check-label" for="flexCheckChecked">
+          2. Wash Hands Often
+          <p class="attribution1">Find more information about <a href="http://www.youtube.com/watch?v=XHISh559oho"><mark>How to Clean Hands and Help Prevent the Flu</mark></a>.</p>
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          3. Clean & Disinfect Commonly Used Surfaces
+          <p class="attribution1">Learn more about <a href="https://www.cdc.gov/hygiene/cleaning/cleaning-your-home.html#:~:text=To%20sanitize%20a%20surface%20or,using%20a%20weaker%20bleach%20solution."><mark>Cleaning and Sanitizing</mark></a>.</p>
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+        <label class="form-check-label" for="flexCheckChecked">
+          4. Cough & Sneeze Into Your Sleeve
+          <p class="attribution1">Learn how and when to <a href="https://www.youtube.com/watch?v=SpPA73SZJYE"><mark>Cover your Mouth and Sneeze</mark></a>.</p>
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          5. Don't Share Personal Items
+          <p class="attribution1">Find more information about <a href="https://healthyliving.azcentral.com/nutrition/"><mark>Guarding Against Germs</mark></a>.</p>
+          </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+        <label class="form-check-label" for="flexCheckChecked">
+          6. Get Vaccinated
+          <p class="attribution1">Find more information about <a href="https://www.cdc.gov/vaccines/"><mark>Vaccines</mark></a>.</p>
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          7. Avoid Touching Wild Animals
+          <p class="attribution1">Learn <a href="https://westernfinancialgroup.ca/How-to-stay-safe-around-wild-animals"><mark>How to Stay Safe Around Wild Animals</mark></a>.</p>
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+        <label class="form-check-label" for="flexCheckChecked">
+          8. Stay Home When Sick
+          <p class="attribution1">Learn the importance of <a href="https://www.e7health.com/post/226/the-importance-of-staying-home-when-sick/"><mark>Staying Home When Sick</mark></a>.</p>
+        </label>
+      </div>
+
+    </main>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- Our JavaScript -->
+    <script src="{{url_for('static', filename='js/myfile.js')}}"></script>
+    
+  </body>
+</html>

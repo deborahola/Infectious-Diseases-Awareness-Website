@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Our CSS -->
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <!-- Title of Page -->
+    <title>Homepage - Infectious Diseases</title>
+  </head>
+
+  <!-- Main Body of Entire Page -->
+  <body>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <ul class="navbar d-flex justify-content-end">
+        <li class="nav-item"><a href="index">Home</a></li>
+        <li class="nav-item"><a href="immunization">Immunization</a></li>
+        <li class="nav-item"><a href="action">Take Action</a></li>
+        <li class="nav-item"><a href="quiz">Quiz</a></li>
+        <li class="nav-item"><a href="about">About</a></li>
+      </ul>
+    </nav>
+
+    <!--Top section of Home (main) page with title and description (subtitle)-->
+    <header class="homepage-heading">
+      <br> <!-- break (delete if needed) -->
+      <h1><b>INFECTIOUS DISEASES AWARENESS</b></h1>
+      <p class="subtitle">Protect yourself and your family from preventable infectious diseases. They are challenging us in ways that are unprecented in modern times.</p>
+    </header>
+
+    <!-- Content: Carousel & Diseases & Fact Generators -->
+    <main>
+      <!-- Carousel with a Few Basic Preventive Measures; 3 items -->
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="{{url_for('static', filename='images/socialdistance.jpg')}}" class="d-block w-10" alt="Image of Social Distancing">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Practice Social Distancing</h2>
+              <p class="attribution">Find more information about <a href="https://healthtalk.unchealthcare.org/what-is-social-distancing-and-why-is-it-important/"><mark>Social Distancing</mark></a>.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="{{url_for('static', filename='images/washing-hands-2.jpg')}}" class="d-block w-10" alt="Image of Hand Washing">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Wash Your Hands</h2>
+              <p class="attribution">Read more about <a href="https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/handwashing-why-its-important"><mark>Keeping Hands Clean</mark></a>.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static', filename='images/mask.png')}}" class="d-block w-10" alt="Image of a Mask">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Wear Your Mask</h2>
+              <p class="attribution">Learn more about <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/about-face-coverings.html"><mark>The Importance of Wearing a Mask</mark></a>.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+      <h3><u>More about how to <a href="action">Take Action</a>.</u></h3>
+
+      <!-- Fact Generators for 6 Diseases -->
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <div class="genFact">
+              <p>Click to learn something new about <h><b>Chickenpox (Varicella)</b></h>.</p>
+              <button id="factBtn1">CLICK</button>
+              <p id="fact1">Chickenpox is caused by the highly contagious varicella zoster virus.</p>
+              <p class="attribution">More info at this <a href="https://www.nfid.org/infectious-diseases/chickenpox-varicella/">website</a></p>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="genFact">
+              <p>Click to learn something new about <h><b>Coronaviruses</b></h>.</p>
+              <button id="factBtn2">CLICK</button>
+              <p id="fact2">Coronaviruses are named for the crown-like spikes on their surface.</p>
+              <p class="attribution">More info at this <a href="https://www.nfid.org/infectious-diseases/coronaviruses/">website</a></p>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="genFact">
+              <p>Click to learn something new about <h><b>Diphtheria</b></h>.</p>
+              <button id="factBtn3">CLICK</button>
+              <p id="fact3">Diphtheria is an acute bacterial disease that usually affects the tonsils, throat, nose, and/or skin.</p>
+              <p class="attribution">More info at this <a href="https://www.nfid.org/infectious-diseases/diphtheria/">website</a></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col">
+            <div class="genFact">
+              <p>Click to learn something new about <h><b>Ebola</b></h>.</p>
+              <button id="factBtn4">CLICK</button>
+              <p id="fact4">Ebola is a rare and deadly disease caused by infection with a virus of the family Filoviridae, genus Ebolavirus.</p>
+              <p class="attribution">More info at this <a href="https://www.nfid.org/infectious-diseases/ebola/">website</a></p>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="genFact">
+              <p>Click to learn something new about <h><b>HPV (Human Papillomavirus)</b></h>.</p>
+              <button id="factBtn5">CLICK</button>
+              <p id="fact5">Human papillomavirus (HPV) is the most common sexually transmitted infection that can cause certain cancers and genital warts.</p>
+              <p class="attribution">More info at this <a href="https://www.nfid.org/infectious-diseases/hpv/">website</a></p>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="genFact">
+              <p>Click to learn something new about <h><b>Monkeypox</b></h>.</p>
+              <button id="factBtn6">CLICK</button>
+              <p id="fact6">Monkeypox is a rare disease that is caused by infection with monkeypox virus.</p>
+              <p class="attribution">More info at this <a href="hhttps://www.nfid.org/infectious-diseases/monkeypox/">website</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <br> <!-- break (delete if needed) -->
+
+      <!-- Row of Disease Images on the Bottom of Page -->
+      <div class="flex-container">
+        <div class="flex-item">
+          <img src="https://i0.wp.com/www.nfid.org/wp-content/uploads/2019/08/Chickenpox-Shingles-Varicella-Zoster.jpg?fit=757%2C512&ssl=1" alt="Image of Chickenpox">
+        </div>
+  
+        <div class="flex-item">
+          <img src="https://i0.wp.com/www.nfid.org/wp-content/uploads/2020/02/Coronavirus.png?fit=767%2C512&ssl=1" alt="Image of Coronavirus">
+        </div>
+  
+        <div class="flex-item">
+          <img src="https://i0.wp.com/www.nfid.org/wp-content/uploads/2019/08/Diphtheria-v1.jpg?fit=767%2C512&ssl=1" alt="Image of Diphtheria">
+        </div>
+
+        <div class="flex-item">
+          <img src="https://i0.wp.com/www.nfid.org/wp-content/uploads/2019/08/Ebola.jpg?fit=767%2C512&ssl=1" alt="Image of Ebola">
+        </div>
+
+        <div class="flex-item">
+          <img src="https://i0.wp.com/www.nfid.org/wp-content/uploads/2019/08/HPV-v1.jpg?fit=757%2C512&ssl=1" alt="Image of HPV">
+        </div>
+
+        <div class="flex-item">
+          <img src="https://i0.wp.com/www.nfid.org/wp-content/uploads/2022/05/Monkeypox-Virus-CDC.jpg?fit=767%2C512&ssl=1" alt="Image of Monkeypox">
+        </div>
+      </div>
+
+      <br> <!-- break (delete if needed) -->
+
+      <marquee>Did you know that...infectious diseases are the third leading cause of death in the United States, causing over 170,000 deaths annually, a figure that has nearly doubled since the early 1980's?</marquee>
+
+    </main>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- Our JavaScript -->
+    <script src="{{url_for('static', filename='js/myfile.js')}}"></script>
+    
+  </body>
+</html>

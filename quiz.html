@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Our CSS -->
+    <link href="{{url_for('static', filename='css/style2.css')}}" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <!-- Title of Page -->
+    <title>Quiz</title>
+  </head>
+
+  <!-- Main Body of Entire Page -->
+  <body>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <ul class="navbar d-flex justify-content-end">
+        <li class="nav-item"><a href="index">Home</a></li>
+        <li class="nav-item"><a href="immunization">Immunization</a></li>
+        <li class="nav-item"><a href="action">Take Action</a></li>
+        <li class="nav-item"><a href="quiz">Quiz</a></li>
+        <li class="nav-item"><a href="about">About</a></li>
+      </ul>
+    </nav>
+
+    <!--Top section of Quiz page with title and description (subtitle)-->
+    <header class="quiz-heading">
+      <br> <!-- break (delete if needed) -->
+      <h1><b>QUIZ</b></h1>
+      <p class="subtitle"><b>Test Your Knowledge!</b></p>
+    </header>
+
+    <!-- Content: Quiz -->
+    <main>
+
+      <div class="quiz-container">
+        <div id="quiz"></div>
+      </div>
+      
+      <br> <!-- break (delete if needed) --> 
+
+      <!-- Buttons -->
+      <button id="previous">Previous Question</button>
+      <button id="next">Next Question</button>
+      <button id="submit">Submit Quiz</button>
+      
+      <div id="results"></div>
+      
+    </main>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- Our JavaScript -->
+    <script src="{{url_for('static', filename='js/myfile2.js')}}"></script>
+    
+  </body>
+</html>

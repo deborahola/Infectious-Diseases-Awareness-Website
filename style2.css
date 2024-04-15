@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+
+/* CSS for Quiz Page */
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul.navbar {
+  font-family: "Roboto Mono", sans-serif;
+  list-style-type: none;        
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  
+  background-color: lightblue;
+  border-style: solid;
+  border-color: white;
+  border-width: 4px;
+  border-radius: 3px;
+}
+
+li.nav-item {
+  display: inline;       
+  float: right;           
+  padding: 5px;
+}
+
+li.nav-item a {   
+  font-size: 15px;
+  font-weight: bold;
+  
+  color: white;
+  
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 16px;
+  padding-right: 16px;
+  
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+li.nav-item a:hover {
+  background-color: white;
+  color: #aa80ff;
+}
+
+body {
+  font-size: 20px;
+	font-family: "Calibri", sans-serif;
+	color: black;
+  font-weight: 300;
+  text-align: center;
+  background-color: lavender;
+}
+
+header {
+  padding-top: 50px;   
+  padding-left: 20%;
+  padding-right: 20%;
+  margin: 1px;         
+}
+
+h1 {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: rgb(121, 55, 255);
+  line-height: 60px;
+  letter-spacing: 10px;
+ 
+  margin: 2px;
+  margin-top: 10px;
+}
+
+.subtitle {
+  font-family: "Calibri", sans-serif;
+  text-align: center;
+  font-size: 25px;
+  color: #0093af;
+  
+  padding-top: 20px;
+}
+
+.question {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  
+}
+
+.answers {
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: left;
+  display: inline-block;
+}
+
+.answers label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+button {
+  font-family: 'Work Sans', sans-serif;
+	font-size: 22px;
+	background-color: #279;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+button:hover {
+	background-color: #38a;
+}
+
+.slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.active-slide {
+  opacity: 1;
+  z-index: 2;
+}
+
+.quiz-container {
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+  margin-left:15%;
+  margin-right:15%;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
